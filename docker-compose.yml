@@ -26,8 +26,9 @@ logspout:
  - "8000:80"
  links:
  - logstash
+ command: logstash://logstash:5000
 logstash:
- image: logstash:6.5.1
+ image: logstash:1.5
  volumes:
  - ./logstash.conf:/etc/logstash.conf
  environment:
